@@ -1,10 +1,4 @@
-#**Traffic Sign Recognition** 
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
+**Traffic Sign Recognition** 
 
 **Build a Traffic Sign Recognition Project**
 
@@ -19,10 +13,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./images/visualized_images.jpg "Visualization"
-[image2]: ./images/train-set-distribution.jpg "Visualization"
-[image3]: ./images/valid-set-distribution.jpg "Visualization"
-[image4]: ./images/test-set-distribution.jpg "Visualization"
+[image1]: ./images/visualized_images.png "Visualization"
+[image2]: ./images/train-set-distribution.png "Visualization"
+[image3]: ./images/validation-set-distribution.png "Visualization"
+[image4]: ./images/test-set-distribution.png "Visualization"
 [image5]: ./images/sharpen-grayscale.png "Traffic Sign 2"
 
 
@@ -36,7 +30,7 @@ The goals / steps of this project are the following:
 [image13]: ./10.png "Traffic Sign 1"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
 ### Writeup / README
@@ -81,7 +75,7 @@ As a last step, I normalized the image data because image data is around 80 and 
 
 
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 My final model consisted of the following layers:
 
@@ -103,11 +97,11 @@ My final model consisted of the following layers:
  
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used AdamOptimizer with learning rate that is 0.001, batch size 128, epochs 20. mu  0,  sigma 0.07
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 first I just use Lenet network and origin image files to train the model and get about 55% accuracy. I change the output demension in Lenet layer as image sign has 43 classes which is more than 10 classes which Lenet is used to classify. I also try to preprocess data before train model. I tried sharpen image, graysclale image and find that grayscale has magnifficent improvement on accuracy. also I normalize the training data with (data-128)/128.0. at last I tune sigma in LeNet to 0.007 which saves several epochs on finding appropriate weight.
 
@@ -132,13 +126,13 @@ If a well known architecture was chosen:
 ### Test a Model on New Images
 
 
-Here are five German traffic signs that I found on the web:
+Here are eight German traffic signs that I found on the web:
 
 ![alt text][image6] ![alt text][image7] ![alt text][image8] ![alt text][image12] 
 ![alt text][image9] ![alt text][image10] ![alt text][image11] ![alt text][image13] 
 
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 
 Here are the results of the prediction:
