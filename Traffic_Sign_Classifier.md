@@ -28,6 +28,7 @@ The goals / steps of this project are the following:
 [image11]: ./8.png "Traffic Sign 1"
 [image12]: ./9.png "Traffic Sign 1"
 [image13]: ./10.png "Traffic Sign 1"
+[image14]: ./images/probabilites.png "Traffic Sign 1"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -134,7 +135,7 @@ Here are eight German traffic signs that I found on the web:
 
 #### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-
+for the images I run test on, there is no specail difficulty here. the images are bright and clear enough except that 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
@@ -151,15 +152,6 @@ Here are the results of the prediction:
 The model was able to correctly guess 8 of the 8 traffic signs, which gives an accuracy of 100%. 
 
 The code for making predictions on my final model is located in the 16th cell of the Ipython notebook.
-
-|Image_Name | Label | Guess1| Guess2| Guess3|
-|:----------:|:-----:|:------:|:------:|:---------------------------------------:| 
-|1.png| 11| 11| 30| 20|
-|2.png| 1| 1| 2| 5|
-|3.png| 12| 12| 40| 35|
-|5.png| 38| 38| 34| 0|
-|6.png| 34| 34| 38| 15|
-|8.png| 18| 18| 26| 20|
-|9.png| 25| 25| 26| 37|
-|10.png| 3| 3| 31| 5|
+at last the softmax probabilities for each of the images are listed blow
+![alt text][image14] 
 
