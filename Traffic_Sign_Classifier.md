@@ -135,7 +135,7 @@ Here are eight German traffic signs that I found on the web:
 
 #### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-for the images I run test on, there is no specail difficulty here. the images are bright and clear enough except that 
+for the images I run test on, there is no specail difficulty here. the images are bright and clear enough except that some of them are rotated by some degrees but this should not cause any difficulty in identify them.
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
